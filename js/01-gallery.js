@@ -6,7 +6,7 @@ console.log(galleryItems);
 const galleryDiv=document.querySelector(".gallery");
 
 galleryItems.forEach(element => {
-  const stringToHtml=`<a class="gallery__link" href="${element.original}"><img class="gallery__image" src="${element.preview}" data-source="${element.original}" alt="${element.description}"></img></a>`;
+  const stringToHtml=`<div class="gallery__item"><a class="gallery__link" href="${element.original}"><img class="gallery__image" src="${element.preview}" data-source="${element.original}" alt="${element.description}"></img></a></div>`;
   galleryDiv.insertAdjacentHTML("afterbegin",stringToHtml);
 });
 
