@@ -10,11 +10,9 @@ galleryItems.forEach(element => {
   galleryList.insertAdjacentHTML("afterbegin",stringToHtml);
 });
 
-galleryList.addEventListener("click", (evt)=>{
-    evt.preventDefault();
-    if (evt.target.tagName!=="IMG") {
-      return
-    };
-    let gallery = new SimpleLightbox('.gallery a', { captionsData:'alt',captionDelay:250 });
-    gallery.on('show.simplelightbox')
-  });
+const gallery = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+});
+
+gallery.on("show.simplelightbox");
